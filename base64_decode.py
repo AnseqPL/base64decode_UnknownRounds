@@ -6,7 +6,7 @@ def decode_base64(data):
     except base64.binascii.Error:
         return None
 
-# open file
+# open file with data in base64
 with open("base64file.txt", "rb") as file:
     encoded_data = file.read()
 
@@ -24,6 +24,6 @@ while True:
 
 print(f"Decoded after: {rounds} rounds coding Base64.")
 
-# write to file
+# write the results in to the file
 with open("decoded_file.txt", "wb") as output_file:
     output_file.write(decoded_data)
